@@ -1,11 +1,14 @@
 # BIOME-z-Project
-
-TODO: Write project summary/notes/howto here.
-Project team: 
- - Bevan Smith
- - Ethan Gray 
- - Jake Thornton
- - Mikayla Housley
+# updated Sept 22 2022
+--------------------------
+Team members:
+- Ethan White
+- Nick Lautieri
+- Sam Blacberg
+- Samuel David
+--------------------------
+ /**/Enter acctual details about project here/**/
+--------------------------
 
 ## Meetings 
 
