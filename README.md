@@ -9,6 +9,9 @@ Team members:
 --------------------------
  /**/Enter acctual details about project here/**/
 --------------------------
+How to start program:
+1.) ...
+--------------------------
 
 ## Meetings 
 
