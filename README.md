@@ -10,7 +10,63 @@ Team members:
  /**/Enter acctual details about project here/**/
 --------------------------
 How to start program:
-1.) ...
+
+Setting up anaconda
+Follow the instructions here to download and install anaconda to your personal machines, or local users in the linux labs.
+https://docs.anaconda.com/anaconda/install/
+
+Make sure to configure your shell to use anaconda (part of the installer, it'll ask you if you want to do it, make sure you hit yes!). Otherwise, you might have to run the command
+
+-> conda init <shell-name>
+ 
+Create a prefix for the project
+Once you have anaconda set up and your shell configured, we need to create an environment for the current project.
+
+On your own computer
+You have full control over this environment, so you can just give it a name and let it install in the default location.
+
+-> conda create -n biomez
+ 
+On the HPCL / linux labs
+This command creates a local prefix to your user, rather than in the global scope. The default location is a system path, which is restricted in the linux labs.
+
+Note: This should not be where the source code is at
+
+-> conda create -p ~/some/path/to/biomez/environment
+Switch to the biomez prefix
+We need to activate the conda environment using the syntax conda activate <prefix-name.
+
+This will make sure we are using the correct project environment.
+
+-> conda activate biomez
+ 
+Install pip in that conda environment
+We need to install the python package manager within this new conda environment.
+
+-> conda install pip
+ 
+Install requirements
+So, most distributed projects for python contain a file in the project root called requirements.txt. I noticed this project had it in the GUI/ folder, where all the source code is in.
+
+This file contains all of the required python libraries necessary for the project to function, and typically version numbers as well.
+
+To install all of the packages required, execute this command from within the GUI/ folder.
+
+-> pip install -r requirements.txt
+ 
+Fixing torchtext
+One last issue before we can get off of the ground, they didn't version-lock the package torchtext and the package has deprecated a feature they were using called unicode_csv_reader.
+
+Instead of downgrading, what I've done is went to the torchtext source code on the version that contained this feature, and I ripped the code for this function and put in the datasets.py and fixed the import error for csv.
+
+https://github.com/pytorch/text/blob/release/0.8/torchtext/utils.py
+
+Running the project
+The entrypoint for this project is main.py.
+
+This will launch the GUI for the application.
+
+-> python3 main.py
 --------------------------
 
 ## Meetings 
