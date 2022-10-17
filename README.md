@@ -7,7 +7,7 @@ Team members:
 - Sam Blacberg
 - Samuel David
 --------------------------
- /**/Enter acctual details about project here/**/
+
 --------------------------
 How to start program:
 
@@ -67,6 +67,7 @@ The entrypoint for this project is main.py.
 This will launch the GUI for the application.
 
 -> python3 main.py
+ 
 --------------------------
 
 ## Meetings 
